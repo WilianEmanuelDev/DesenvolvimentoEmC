@@ -64,19 +64,14 @@ int main() {
                 printf("2. Sair\n");
                 scanf("%d", &opcao1);
                 // Verifica a opção escolhida pelo jogador
-                    switch (opcao1)
-                    {
-                    case 1:
-                        printf("Retornando ao menu principal...(Digite 1 para confirmar)\n");
-                        scanf("%d", &opcao1);
-                        opcao = 0;
-                        break;
-                    case 2:
-                        printf("Saindo do jogo...\n");
-                        return 0;
-                    default:
-                        printf("Opcao invalida! Tente novamente.\n");
-                        break;
+                 if (opcao1 == 1) {
+                    printf("Retornando ao menu principal...\n");
+                    opcao = 0; // Retorna ao menu principal
+                } else if (opcao1 == 2) {
+                    printf("Saindo do jogo...\n");
+                    return 0;
+                    printf("Opcao invalida! Tente novamente.\n");
+                    opcao = 0; // Retorna ao menu principal   
                 }
                 break;
 
